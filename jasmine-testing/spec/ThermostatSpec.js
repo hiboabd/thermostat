@@ -1,13 +1,13 @@
 // 'use strict';
 
-describe('Thermostat', function(){
-  var thermostat
+describe('Thermostat', function () {
+  var thermostat;
 
-  beforeEach(function(){
+  beforeEach(function () {
     thermostat = new Thermostat();
   });
 
-  it('initialised with degrees set to 20', function(){
-    expect(thermostat.temperature).toEqual(20);
+  it('initialised with degrees set to 20', function () {
+    expect(thermostat.getCurrentTemperature()).toEqual(20);
   });
 });
