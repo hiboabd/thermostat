@@ -35,8 +35,18 @@ describe('Thermostat', function () {
   });
 
   it('can switch PSM off', function () {
-    thermostat.switchPowerSavingModeOff()
+    thermostat.switchPowerSavingModeOff();
+
     expect(thermostat.isPowerSavingModeOn()).toBe(false);
+  });
+
+  it('can be reset to the default temperature', function() {
+    for(var i = 0; i < 6; i++) {
+      thermostat.up();
+    }
+    thermostat.resetTemperature();
+
+    expect(thermostat.getCurrentTemperature()).toEqual(20);
   });
 
   it('can switch PSM back on', function (){
