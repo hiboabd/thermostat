@@ -1,3 +1,17 @@
+body {
+  font-family: 'Pangolin', cursive;
+  text-align: center;
+}
+button {
+  color: none;
+  box-shadow: none;
+  border: none;
+  padding: 8px;
+  width: 15%;
+  margin: 15px;
+
+}
+
 .low-usage {
   color: green;
 }
@@ -8,4 +22,20 @@
 
 .high-usage {
   color: red;
+}
+.thermostat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.temperature-title {
+  display: flex;
+}
+
+#temperature {
+  font-size: 100px;
+}
+#degrees {
+  font-size: 100px;
+  transform: rotate(90deg);
 }

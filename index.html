@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
     <title>Thermostat</title>
   </head>
   <body>
@@ -10,10 +11,9 @@
     <script src="interface.js"></script>
     <script type="text/javascript">
 
-
     </script>
-    <section>
-      <h1>Current temperature: <span id="current-temperature"></span></h1>
+    <section class='weather'>
+      <h1>Current temperature: <span id="current-temperature"></span> °C</h1>
       <select id="current-city">
         <option value="london">London</option>
         <option value="new york">New York</option>
@@ -21,13 +21,18 @@
         <option value="tokyo">Tokyo</option>
       </select>
     </section>
-    <section>
-      <h1 id="temperature">Temperature</h1>
+    <section class='thermostat'>
+      <div class="temperature-title">
+        <p id="temperature">Temperature</p>
+        <p id='degrees'>degrees</p>
+      </div>
       <p>
+      <div class='thermostat-controls'>
         <button id="temperature-up">+</button>
         <button id="temperature-down">-</button>
-        <button id="temperature-reset">reset</button>
-        power saving mode is <span id="power-saving-status">on</span>
+      </div>
+      <button id="temperature-reset">reset</button>
+      <p>power saving mode is <span id="power-saving-status">on</span></p>
         <button id="powersaving-on">PSM on</button>
         <button id="powersaving-off">PSM off</button>
       </p>
